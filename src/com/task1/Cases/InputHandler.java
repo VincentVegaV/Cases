@@ -3,13 +3,27 @@ package com.task1.Cases;
 import java.util.Scanner;
 import java.io.*;
 
+/**
+ * "InputHandler" class reads and validate strings from console input
+ *
+ * @author a2.verbitsky
+ * @version 1.0
+ */
 public class InputHandler {
+    /**Field for saving file path string*/
     private String path = "";
+    /**Field for saving number of cases string*/
     private String number = "";
+    /**New instance of File*/
     File fileChecker;
 
     Scanner scanner = new Scanner(System.in);
 
+    /**
+     * Method validate empty path string and file existing
+     *
+     * @return file path string
+     */
     String getPath() {
 
         while (path.trim().equals("")) {
@@ -27,7 +41,11 @@ public class InputHandler {
         return path;
     }
 
-
+    /**
+     * Method set default value in case user leave "Number" input empty
+     *
+     * @return integer number of cases
+     */
     Integer getNumber() {
         System.out.println("Enter number (Press ENTER to set default):");
 
